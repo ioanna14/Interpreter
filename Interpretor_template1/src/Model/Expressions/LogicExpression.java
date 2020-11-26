@@ -3,6 +3,7 @@ package Model.Expressions;
 import Exceptions.DivisionByZEROException;
 import Exceptions.MyException;
 import Model.ADT.IDict;
+import Model.ADT.IHeap;
 import Model.Types.BoolType;
 import Model.Values.BoolValue;
 import Model.Values.Value;
@@ -19,11 +20,11 @@ public class LogicExpression implements Expression{
     }
 
     @Override
-    public Value eval(IDict<String, Value> symTable) throws DivisionByZEROException {
+    public Value eval(IDict<String, Value> symTable, IHeap<Integer, Value> heapTable) throws DivisionByZEROException {
         Value v1, v2;
-        v1 = e1.eval(symTable);
+        v1 = e1.eval(symTable, heapTable);
         if (v1.getType().equals(new BoolType())) {
-            v2 = e2.eval(symTable);
+            v2 = e2.eval(symTable, heapTable);
             if (v2.getType().equals(new BoolType())) {
                 BoolValue i1 = (BoolValue) v1;
                 BoolValue i2 = (BoolValue) v2;

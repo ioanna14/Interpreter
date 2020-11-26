@@ -2,6 +2,7 @@ package Model.Expressions;
 
 import Model.ADT.IDict;
 import Exceptions.*;
+import Model.ADT.IHeap;
 import Model.Types.IntType;
 import Model.Values.IntValue;
 import Model.Values.Value;
@@ -16,11 +17,11 @@ public class ArithExpression implements Expression {
         this.e2 = e2;
     }
 
-    public Value eval(IDict<String, Value> symTable) throws DivisionByZEROException {
+    public Value eval(IDict<String, Value> symTable, IHeap<Integer, Value> heapTable) throws DivisionByZEROException {
         Value v1, v2;
-        v1 = e1.eval(symTable);
+        v1 = e1.eval(symTable, heapTable);
         if (v1.getType().equals(new IntType())) {
-            v2 = e2.eval(symTable);
+            v2 = e2.eval(symTable, heapTable);
             if (v2.getType().equals(new IntType())) {
                 IntValue i1 = (IntValue) v1;
                 IntValue i2 = (IntValue) v2;

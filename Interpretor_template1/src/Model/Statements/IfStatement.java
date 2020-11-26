@@ -2,6 +2,7 @@ package Model.Statements;
 
 import Exceptions.MyException;
 import Model.ADT.IDict;
+import Model.ADT.IHeap;
 import Model.ADT.IStack;
 import Model.Expressions.Expression;
 import Model.PrgState;
@@ -25,7 +26,8 @@ public class IfStatement implements IStatement{
     public PrgState execute(PrgState state) throws MyException {
         IStack<IStatement> stack = state.getStack();
         IDict<String, Value> symTable = state.getSymTable();
-        Value condValue = condition.eval(symTable);
+        IHeap<Integer, Value> heapTable = state.getHeapTable();
+        Value condValue = condition.eval(symTable, heapTable);
         Type condValueType = condValue.getType();
         if (condValueType.equals(new BoolType())) {
             if (((BoolValue) condValue).getValue()){

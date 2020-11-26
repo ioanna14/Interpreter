@@ -1,6 +1,7 @@
 package Model.Expressions;
 import Exceptions.MyException;
 import Model.ADT.IDict;
+import Model.ADT.IHeap;
 import Model.Values.Value;
 
 public class ValueExpression implements Expression {
@@ -11,7 +12,7 @@ public class ValueExpression implements Expression {
     }
 
     @Override
-    public Value eval(IDict<String, Value> symTable) throws MyException {
+    public Value eval(IDict<String, Value> symTable, IHeap<Integer, Value> heapTable) throws MyException {
         return value;
     }
 

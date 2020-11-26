@@ -1,9 +1,11 @@
 package Model;
 
 import Model.ADT.IDict;
+import Model.ADT.IHeap;
 import Model.ADT.IList;
 import Model.ADT.IStack;
 import Model.Statements.IStatement;
+import Model.Values.IntValue;
 import Model.Values.StringValue;
 import Model.Values.Value;
 
@@ -14,13 +16,17 @@ public class PrgState {
     IStack<IStatement> exeStack;
     IDict<String, Value> symTable;
     IDict<StringValue, BufferedReader> fileTable;
+    IHeap<Integer, Value> heapTable;
     IList<Value> out;
     IStatement originalProgram;
 
-    public PrgState(IStack<IStatement> exeStack, IDict<String, Value> symTable, IDict<StringValue, BufferedReader> fileTable, IList<Value> out, IStatement originalProgram) {
+    public PrgState(IStack<IStatement> exeStack, IDict<String, Value> symTable,
+                    IDict<StringValue, BufferedReader> fileTable, IHeap<Integer, Value> heapTable,
+                    IList<Value> out, IStatement originalProgram) {
         this.exeStack = exeStack;
         this.symTable = symTable;
         this.fileTable = fileTable;
+        this.heapTable = heapTable;
         this.out = out;
         this.originalProgram = originalProgram;
     }
@@ -41,6 +47,14 @@ public class PrgState {
         return out;
     }
 
+    public IHeap<Integer, Value> getHeapTable() {
+        return heapTable;
+    }
+
+    public void setHeapTable(IHeap<Integer, Value> heapTable) {
+        this.heapTable = heapTable;
+    }
+
     public void setStack(IStack<IStatement> exeStack) {
         this.exeStack = exeStack;
     }
@@ -59,10 +73,11 @@ public class PrgState {
 
     @Override
     public String toString() {
-        return "===== Program State =====\n" +
+        return "\n\n===== Program State =====\n" +
                 "exeStack: " + exeStack +
                 "\nsymTable: " + symTable +
                 "\nfileTable: " + fileTable +
+                "\nheapTable: " + heapTable +
                 "\nout: " + out +
                 "\noriginalProgram:" + originalProgram;
     }

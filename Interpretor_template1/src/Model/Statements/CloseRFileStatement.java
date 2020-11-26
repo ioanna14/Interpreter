@@ -19,13 +19,11 @@ public class CloseRFileStatement implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) throws MyException {
-        IStack<IStatement> exeStack = state.getStack();
-        exeStack.pop();
         IDict<String, Value> symTable = state.getSymTable();
+        IHeap<Integer, Value> heapTable = state.getHeapTable();
         IDict<StringValue, BufferedReader> fileTable = state.getFileTable();
-        // check again, not sure it's ok
-        if (exp.eval(symTable).getType().equals(new StringType())) {
-            StringValue stringValue = (StringValue) exp.eval(symTable);
+        if (exp.eval(symTable, heapTable).getType().equals(new StringType())) {
+            StringValue stringValue = (StringValue) exp.eval(symTable, heapTable);
             if (fileTable.isDefined(stringValue)) {
                 BufferedReader br = fileTable.lookup(stringValue);
                 try {
@@ -39,5 +37,10 @@ public class CloseRFileStatement implements IStatement {
         } else
             throw new MyException("The expression has not string type.");
         return state;
+    }
+
+    @Override
+    public String toString() {
+        return "closeRFile(" + exp + ')';
     }
 }

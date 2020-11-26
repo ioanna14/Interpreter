@@ -19,10 +19,10 @@ public class OpenRFileStatement implements IStatement {
     @Override
     public PrgState execute(PrgState state) throws MyException {
         IStack<IStatement> exeStack = state.getStack();
-        exeStack.pop();
         IDict<String, Value> symTable = state.getSymTable();
+        IHeap<Integer, Value> heapTable = state.getHeapTable();
         IDict<StringValue, BufferedReader> fileTable = state.getFileTable();
-        Value val = exp.eval(symTable);
+        Value val = exp.eval(symTable, heapTable);
         if (val.getType().equals(new StringType())) {
             StringValue strVal = (StringValue) val;
             if (!fileTable.isDefined(strVal)) {
@@ -39,5 +39,10 @@ public class OpenRFileStatement implements IStatement {
             throw new MyException("The expression has not string type.");
 
         return state;
+    }
+
+    @Override
+    public String toString() {
+        return "openRFile(" + exp + ')';
     }
 }

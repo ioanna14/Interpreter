@@ -35,7 +35,7 @@ public class MyList<T> implements IList<T> {
 
     @Override
     public String toString() {
-        return "List: " + list;
+        return "" + list;
     }
 
     @Override

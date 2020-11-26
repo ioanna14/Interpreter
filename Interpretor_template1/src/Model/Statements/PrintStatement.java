@@ -1,6 +1,7 @@
 package Model.Statements;
 
 import Exceptions.MyException;
+import Model.ADT.IHeap;
 import Model.ADT.IList;
 import Model.Expressions.Expression;
 import Model.PrgState;
@@ -16,7 +17,8 @@ public class PrintStatement implements IStatement{
     @Override
     public PrgState execute(PrgState state) throws MyException {
         IList<Value> out = state.getOut();
-        out.add(expression.eval(state.getSymTable()));
+        IHeap<Integer, Value> heapTable = state.getHeapTable();
+        out.add(expression.eval(state.getSymTable(), heapTable));
         return state;
     }
 

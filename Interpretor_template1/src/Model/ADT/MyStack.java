@@ -1,6 +1,7 @@
 package Model.ADT;
 
 import Exceptions.ADTException;
+import Model.Statements.IStatement;
 
 import java.util.Stack;
 
@@ -31,6 +32,11 @@ public class MyStack<T> implements IStack<T> {
 
     @Override
     public String toString() {
-        return "Stack: " + stack;
+        StringBuffer buff = new StringBuffer();
+        for (T statement : stack) {
+            buff.append(statement.toString());
+        }
+        return buff.toString();
+
     }
 }

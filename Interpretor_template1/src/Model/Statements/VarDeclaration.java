@@ -18,7 +18,6 @@ public class VarDeclaration implements IStatement {
 
     @Override
     public PrgState execute(PrgState state) throws MyException {
-        IStack<IStatement> stack = state.getStack();
         IDict<String, Value> symTbl = state.getSymTable();
         if (symTbl.isDefined(id))
             throw new MyException("Variable " + id + " is already declared!");

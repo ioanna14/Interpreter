@@ -35,6 +35,11 @@ public class IntValue implements Value{
     }
 
     @Override
+    public Value getCopy() {
+        return new IntValue(value);
+    }
+
+    @Override
     public String toString() {
         return "int(" + value + ")";
     }

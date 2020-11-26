@@ -1,9 +1,8 @@
 package Model.Expressions;
 
-import Exceptions.DivisionByZEROException;
 import Exceptions.MyException;
 import Model.ADT.IDict;
-import Model.Types.BoolType;
+import Model.ADT.IHeap;
 import Model.Types.IntType;
 import Model.Values.BoolValue;
 import Model.Values.IntValue;
@@ -21,11 +20,11 @@ public class RelationalExpression implements Expression{
     }
 
     @Override
-    public Value eval(IDict<String, Value> symTable) throws MyException {
+    public Value eval(IDict<String, Value> symTable, IHeap<Integer, Value> heapTable) throws MyException {
         Value v1, v2;
-        v1 = e1.eval(symTable);
+        v1 = e1.eval(symTable, heapTable);
         if (v1.getType().equals(new IntType())) {
-            v2 = e2.eval(symTable);
+            v2 = e2.eval(symTable, heapTable);
             if (v2.getType().equals(new IntType())) {
                 IntValue i1 = (IntValue) v1;
                 IntValue i2 = (IntValue) v2;

@@ -1,4 +1,5 @@
 package Model.ADT;
+import java.util.Dictionary;
 import java.util.HashMap;
 import Exceptions.ADTException;
 
@@ -9,6 +10,11 @@ public class Dict<T1,T2> implements IDict<T1,T2> {
         dictionary = new HashMap<T1,T2>();
     }
 
+
+    @Override
+    public HashMap<T1, T2> getContent() {
+        return this.dictionary;
+    }
 
     @Override
     public void add(T1 key, T2 value) {
@@ -49,6 +55,6 @@ public class Dict<T1,T2> implements IDict<T1,T2> {
 
     @Override
     public String toString() {
-        return "Dictionary: " + dictionary;
+        return "" + dictionary;
     }
 }
