@@ -1,0 +1,144 @@
+
+
+===== Program State =====
+exeStack: int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+symTable: Dictionary: {}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)int v
+symTable: Dictionary: {}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+symTable: Dictionary: {v=int(0)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)v = int(6)
+symTable: Dictionary: {v=int(0)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+symTable: Dictionary: {v=int(6)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )
+symTable: Dictionary: {v=int(6)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )print(v); v = v - int(1)
+symTable: Dictionary: {v=int(6)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )v = v - int(1)print(v)
+symTable: Dictionary: {v=int(6)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: []
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )v = v - int(1)
+symTable: Dictionary: {v=int(6)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )
+symTable: Dictionary: {v=int(5)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )print(v); v = v - int(1)
+symTable: Dictionary: {v=int(5)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )v = v - int(1)print(v)
+symTable: Dictionary: {v=int(5)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )v = v - int(1)
+symTable: Dictionary: {v=int(5)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6), int(5)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)while ( v>int(4) ) do (print(v); v = v - int(1) )
+symTable: Dictionary: {v=int(4)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6), int(5)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: print(v)
+symTable: Dictionary: {v=int(4)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6), int(5)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
+
+
+===== Program State =====
+exeStack: 
+symTable: Dictionary: {v=int(4)}
+fileTable: Dictionary: {}
+heapTable: heap: {}
+out: List: [int(6), int(5), int(4)]
+originalProgram:int v; v = int(6); while ( v>int(4) ) do (print(v); v = v - int(1) ); print(v)
