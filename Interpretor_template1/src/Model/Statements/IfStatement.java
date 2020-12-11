@@ -1,6 +1,7 @@
 package Model.Statements;
 
 import Exceptions.MyException;
+import Model.ADT.Dict;
 import Model.ADT.IDict;
 import Model.ADT.IHeap;
 import Model.ADT.IStack;
@@ -11,7 +12,7 @@ import Model.Types.Type;
 import Model.Values.BoolValue;
 import Model.Values.Value;
 
-public class IfStatement implements IStatement{
+public class IfStatement implements IStatement {
     Expression condition;
     IStatement thenBranch;
     IStatement elseBranch;
@@ -30,15 +31,24 @@ public class IfStatement implements IStatement{
         Value condValue = condition.eval(symTable, heapTable);
         Type condValueType = condValue.getType();
         if (condValueType.equals(new BoolType())) {
-            if (((BoolValue) condValue).getValue()){
+            if (((BoolValue) condValue).getValue()) {
                 stack.push(thenBranch);
-            }
-            else
+            } else
                 stack.push(elseBranch);
-        }
-        else
+        } else
             throw new MyException("Conditional expression is not a boolean!");
-        return state;
+        return null;
+    }
+
+    @Override
+    public IDict<String, Type> typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        Type typeExp = condition.typeCheck(typeEnv);
+        if (typeExp.equals(new BoolType())) {
+            thenBranch.typeCheck(new Dict<>(typeEnv));
+            elseBranch.typeCheck(new Dict<>(typeEnv));
+            return typeEnv;
+        } else
+            throw new MyException("The condition of IF has not the type bool");
     }
 
     @Override

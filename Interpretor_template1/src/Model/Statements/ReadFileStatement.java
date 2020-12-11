@@ -5,6 +5,8 @@ import Model.ADT.*;
 import Model.Expressions.Expression;
 import Model.PrgState;
 import Model.Types.IntType;
+import Model.Types.StringType;
+import Model.Types.Type;
 import Model.Values.*;
 
 import java.io.*;
@@ -41,10 +43,20 @@ public class ReadFileStatement implements IStatement {
                     throw new MyException("Not a string value!");
                 }
             } else
-                throw new MyException("The expression has not int type.");
+                throw new MyException("The variable is not of int type.");
         } else
             throw new MyException("The variable is not defined in the table.");
-        return state;
+        return null;
+    }
+
+    @Override
+    public IDict<String, Type> typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        Type typeVar = typeEnv.lookup(varName);
+        Type typeExp = exp.typeCheck(typeEnv);
+        if (typeVar.equals(new IntType()) && typeExp.equals(new StringType()))
+            return typeEnv;
+        else
+            throw new MyException("Read File Statement: not a good type for one of the variables! ");
     }
 
     @Override

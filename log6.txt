@@ -1,0 +1,495 @@
+
+
+===== Program State =====
+exeStack: int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: int v
+ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: int v
+ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: ref(int) a
+v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: ref(int) a
+v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: v = int(10)
+new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: v = int(10)
+new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(10)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(10)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: new(a, int(22))
+fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(10)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: new(a, int(22))
+fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(0,int), v=int(10)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: fork(wH(a, int(30)); v = int(32); print(v); print(rH(a)))
+print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: fork(wH(a, int(30)); v = int(32); print(v); print(rH(a)))
+print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: wH(a, int(30)); v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: wH(a, int(30)); v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(v)
+print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: wH(a, int(30))
+v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(v)
+print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: wH(a, int(30))
+v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(22)}
+out: []
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10)]
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10)]
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: v = int(32); print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: 
+symTable: {a=ref(1,int), v=int(10)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30)]
+originalProgram:int v; ref(int) a; v = int(10); new(a, int(22)); fork(wH(a, int(30)); v = int(32); print(v); print(rH(a))); print(v); print(rH(a))
+id:6
+
+
+===== Program State =====
+exeStack: print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(v); print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30), int(32)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30), int(32)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30), int(32)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: print(rH(a))
+
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30), int(32)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: 
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30), int(32), int(30)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7
+
+
+===== Program State =====
+exeStack: 
+symTable: {a=ref(1,int), v=int(32)}
+fileTable: {}
+heapTable: {1=int(30)}
+out: [int(10), int(30), int(32), int(30)]
+originalProgram:wH(a, int(30)); v = int(32); print(v); print(rH(a))
+id:7

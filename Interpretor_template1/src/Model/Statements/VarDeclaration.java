@@ -24,11 +24,17 @@ public class VarDeclaration implements IStatement {
         else {
             symTbl.add(id, type.getDefaultValue());
         }
-        return state;
+        return null;
+    }
+
+    @Override
+    public IDict<String, Type> typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        typeEnv.add(id, type);
+        return typeEnv;
     }
 
     @Override
     public String toString() {
-        return  type + " " + id;
+        return type + " " + id;
     }
 }

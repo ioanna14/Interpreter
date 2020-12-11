@@ -1,1 +1,205 @@
 
+
+===== Program State =====
+exeStack: int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: int a
+int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: int a
+int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {a=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {a=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: int b
+a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {a=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: int b
+a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {a=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {a=int(0), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+
+symTable: {a=int(0), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: a = int(2) + int(3) * int(5)
+b = a + int(1); print(b)
+
+symTable: {a=int(0), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: a = int(2) + int(3) * int(5)
+b = a + int(1); print(b)
+
+symTable: {a=int(0), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: b = a + int(1); print(b)
+
+symTable: {a=int(17), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: b = a + int(1); print(b)
+
+symTable: {a=int(17), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: b = a + int(1)
+print(b)
+
+symTable: {a=int(17), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: b = a + int(1)
+print(b)
+
+symTable: {a=int(17), b=int(0)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: print(b)
+
+symTable: {a=int(17), b=int(18)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: print(b)
+
+symTable: {a=int(17), b=int(18)}
+fileTable: {}
+heapTable: {}
+out: []
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1
+
+
+===== Program State =====
+exeStack: 
+symTable: {a=int(17), b=int(18)}
+fileTable: {}
+heapTable: {}
+out: [int(18)]
+originalProgram:int a; int b; a = int(2) + int(3) * int(5); b = a + int(1); print(b)
+id:1

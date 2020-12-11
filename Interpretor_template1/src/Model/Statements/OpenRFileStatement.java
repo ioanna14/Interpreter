@@ -38,7 +38,14 @@ public class OpenRFileStatement implements IStatement {
         } else
             throw new MyException("The expression has not string type.");
 
-        return state;
+        return null;
+    }
+
+    @Override
+    public IDict<String, Type> typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        if (exp.typeCheck(typeEnv).equals(new StringType()))
+            return typeEnv;
+        else throw new MyException("Expression not of  Type String!");
     }
 
     @Override

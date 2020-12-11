@@ -19,9 +19,6 @@ public class MyList<T> implements IList<T> {
 
     @Override
     public void add(T v) {
-        if (this.list.contains(v)) {
-            throw new ADTException("Duplicate element!");
-        }
         this.list.add(v);
     }
 

@@ -5,6 +5,8 @@ import Exceptions.MyException;
 import Model.ADT.IDict;
 import Model.ADT.IHeap;
 import Model.Types.BoolType;
+import Model.Types.IntType;
+import Model.Types.Type;
 import Model.Values.BoolValue;
 import Model.Values.Value;
 
@@ -39,6 +41,19 @@ public class LogicExpression implements Expression{
                     throw new MyException("The operator is wrong!");
             } else
                 throw new MyException("Second operand is not a boolean!");
+        } else
+            throw new MyException("First operand is not a boolean!");
+    }
+
+    @Override
+    public Type typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        Type typ1, typ2;
+        typ1 = e1.typeCheck(typeEnv);
+        typ2 = e2.typeCheck(typeEnv);
+        if (typ1.equals(new BoolType())) {
+            if (typ2.equals(new BoolType())) {
+                return new BoolType();
+            } else throw new MyException("Second operand is not a boolean!");
         } else
             throw new MyException("First operand is not a boolean!");
     }

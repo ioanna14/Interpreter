@@ -2,6 +2,7 @@ package Model.Expressions;
 import Model.ADT.IDict;
 import Exceptions.*;
 import Model.ADT.IHeap;
+import Model.Types.Type;
 import Model.Values.Value;
 
 public class VarExpression implements Expression {
@@ -15,6 +16,11 @@ public class VarExpression implements Expression {
         if (!symTable.isDefined(id))
             throw new MyException("Variable x is not defined!");
         return symTable.lookup(id);
+    }
+
+    @Override
+    public Type typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        return typeEnv.lookup(id);
     }
 
     @Override

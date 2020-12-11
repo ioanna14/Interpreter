@@ -7,20 +7,28 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Repository implements IRepository {
 
-    MyList<PrgState> myPrgStates;
+    List<PrgState> myPrgStates;
     String logFilePath;
 
     public Repository(PrgState prg1, String logFilePath) {
         this.logFilePath = logFilePath;
-        this.myPrgStates = new MyList<PrgState>();
+        this.myPrgStates = new ArrayList<>();
+        this.myPrgStates.add(prg1);
     }
 
     @Override
-    public PrgState getCrtPrg() {
-        return myPrgStates.get(0);
+    public List<PrgState> getPrgList() {
+        return this.myPrgStates;
+    }
+
+    @Override
+    public void setPrgList(List<PrgState> newPrograms) {
+        this.myPrgStates = newPrograms;
     }
 
     @Override
@@ -29,7 +37,7 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public void logPrgStateExec(PrgState prgState) throws MyException, IOException {
+    public void logPrgStateExec(PrgState prgState) throws MyException {
         try {
             try(PrintWriter logFile = new PrintWriter(new BufferedWriter(
                     new FileWriter(logFilePath, true)))){

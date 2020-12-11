@@ -1,15 +1,21 @@
 package Model.ADT;
-import java.util.Dictionary;
+
 import java.util.HashMap;
 import Exceptions.ADTException;
 
-public class Dict<T1,T2> implements IDict<T1,T2> {
+public class Dict<T1, T2> implements IDict<T1, T2> {
     HashMap<T1, T2> dictionary;
 
     public Dict() {
-        dictionary = new HashMap<T1,T2>();
+        dictionary = new HashMap<T1, T2>();
     }
 
+    public Dict(IDict<T1, T2> oldDictionary) {
+        this.dictionary = new HashMap<T1, T2>();
+        for (T1 key : oldDictionary.getKeys()) {
+            this.dictionary.put(key, oldDictionary.lookup(key));
+        }
+    }
 
     @Override
     public HashMap<T1, T2> getContent() {
@@ -21,7 +27,7 @@ public class Dict<T1,T2> implements IDict<T1,T2> {
         if (this.dictionary.containsKey(key)) {
             throw new ADTException("Duplicate key!");
         }
-        this.dictionary.put(key,value);
+        this.dictionary.put(key, value);
     }
 
     @Override
@@ -29,7 +35,7 @@ public class Dict<T1,T2> implements IDict<T1,T2> {
         if (!this.dictionary.containsKey(key)) {
             throw new ADTException("The key does not exist!");
         }
-        this.dictionary.replace(key,newValue);
+        this.dictionary.replace(key, newValue);
     }
 
     @Override
@@ -42,10 +48,15 @@ public class Dict<T1,T2> implements IDict<T1,T2> {
 
     @Override
     public T2 lookup(T1 key) {
-        if (! this.dictionary.containsKey(key)) {
+        if (!this.dictionary.containsKey(key)) {
             throw new ADTException("The key does not exist!");
         }
         return this.dictionary.get(key);
+    }
+
+    @Override
+    public Iterable<T1> getKeys() {
+        return dictionary.keySet();
     }
 
     @Override

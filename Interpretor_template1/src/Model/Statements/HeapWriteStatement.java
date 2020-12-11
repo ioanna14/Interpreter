@@ -6,7 +6,7 @@ import Model.ADT.IHeap;
 import Model.Expressions.Expression;
 import Model.PrgState;
 import Model.Types.RefType;
-import Model.Values.IntValue;
+import Model.Types.Type;
 import Model.Values.RefValue;
 import Model.Values.Value;
 
@@ -24,9 +24,9 @@ public class HeapWriteStatement implements IStatement{
         IDict<String, Value> symTable = state.getSymTable();
         IHeap<Integer, Value> heapTable = state.getHeapTable();
         if (symTable.isDefined(varName)){
-            Value variable = symTable.lookup(varName);
-            if (variable.getType() instanceof RefType) {
-                RefValue ref = (RefValue) variable;
+            Value variable_value = symTable.lookup(varName);
+            if (variable_value instanceof RefValue) {
+                RefValue ref = (RefValue) variable_value;
                 if (heapTable.isDefined(ref.getAddress())) {
                     Value expValue = expression.eval(symTable, heapTable);
                     if (expValue.getType().equals(ref.getLocationType())) {
@@ -40,6 +40,16 @@ public class HeapWriteStatement implements IStatement{
         } else
             throw new MyException("The variable is not defined!");
         return state;
+    }
+
+    @Override
+    public IDict<String, Type> typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        Type typeVar = typeEnv.lookup(varName);
+        Type typeExp = expression.typeCheck(typeEnv);
+        if (typeVar.equals(new RefType(typeExp)))
+            return typeEnv;
+        else
+            throw new MyException("WH Statement: right hand side and left hand side have different types! ");
     }
 
     @Override

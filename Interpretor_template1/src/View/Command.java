@@ -49,7 +49,7 @@ class RunExample extends Command {
     public void execute() throws IOException {
         try {
             ctr.allSteps();
-        } catch (MyException | IOException me) {
+        } catch (MyException | InterruptedException me) {
             System.out.println(me.getMessage());
         }
     }

@@ -29,11 +29,21 @@ public class AssignStatement implements IStatement {
                         "and type of  the assigned expression do not match");
         } else
             throw new MyException("The used variable " + id + " was not declared before!");
-        return state;
+        return null;
+    }
+
+    @Override
+    public IDict<String, Type> typeCheck(IDict<String, Type> typeEnv) throws MyException {
+        Type typeVar = typeEnv.lookup(id);
+        Type typeExp = expression.typeCheck(typeEnv);
+        if (typeVar.equals(typeExp))
+            return typeEnv;
+        else
+            throw new MyException("Assignment: right hand side and left hand side have different types! ");
     }
 
     @Override
     public String toString() {
-        return  id + " = "+ expression.toString();
+        return id + " = " + expression.toString();
     }
 }

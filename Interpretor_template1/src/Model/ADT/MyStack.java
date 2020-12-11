@@ -1,15 +1,15 @@
 package Model.ADT;
 
 import Exceptions.ADTException;
-import Model.Statements.IStatement;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class MyStack<T> implements IStack<T> {
-    Stack<T> stack;
+    Deque<T> stack;
 
     public MyStack() {
-        stack = new Stack<T>();
+        stack = new ArrayDeque<T>();
     }
 
     @Override
@@ -34,7 +34,7 @@ public class MyStack<T> implements IStack<T> {
     public String toString() {
         StringBuffer buff = new StringBuffer();
         for (T statement : stack) {
-            buff.append(statement.toString());
+            buff.append(statement.toString()).append("\n");
         }
         return buff.toString();
 
